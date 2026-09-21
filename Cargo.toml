@@ -1,0 +1,32 @@
+[package]
+name = "sts2-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["solidSF <engineering@solidsf.com>"]
+description = "High-performance zero-Python Rust suite, PCK unpacker, and native HTTP bridge harness for Slay the Spire 2"
+readme = "README.md"
+license = "MIT"
+keywords = ["slay-the-spire", "game-ai", "headless", "reinforcement-learning", "bridge"]
+categories = ["games", "command-line-utilities", "development-tools"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+md-5 = "0.10"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+tiny_http = "0.12"
+rand = "0.8"
+byteorder = "1.5"
+
+[dev-dependencies]
+tempfile = "3.10"
+
+[[bin]]
+name = "sts2-pck"
+path = "src/bin/sts2_pck.rs"
+
+[[bin]]
+name = "sts2-bridge"
+path = "src/bin/sts2_bridge.rs"

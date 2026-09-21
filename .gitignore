@@ -1,0 +1,6 @@
+/target
+**/*.rs.bk
+*.swp
+*.orig
+.DS_Store
+logs/
